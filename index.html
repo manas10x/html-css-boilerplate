@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>YOUR PAGE TITLE — Short, descriptive, unique</title>
+  <meta name="description" content="A concise, compelling page description (150-160 chars). Explain value & include main keywords naturally." />
+  <meta name="keywords" content="keyword1, keyword2, keyword3" />
+
+  <!-- Canonical & robots -->
+  <link rel="canonical" href="https://www.example.com/current-page-path" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Preconnect & performance hints -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="/css/main.css" />
+  <link rel="preload" as="script" href="/js/main.js" />
+
+  <!-- Favicons (add real files) -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="YOUR PAGE TITLE" />
+  <meta property="og:description" content="Short page description for social cards." />
+  <meta property="og:url" content="https://www.example.com/current-page-path" />
+  <meta property="og:site_name" content="Your Site Name" />
+  <meta property="og:image" content="https://www.example.com/assets/preview-image.jpg" />
+  <meta property="og:image:alt" content="Short image description" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@your_twitter_handle" />
+  <meta name="twitter:creator" content="@author_handle" />
+  <meta name="twitter:title" content="YOUR PAGE TITLE" />
+  <meta name="twitter:description" content="Short description for Twitter card." />
+  <meta name="twitter:image" content="https://www.example.com/assets/preview-image.jpg" />
+
+  <!-- Structured data (JSON-LD) — edit values for your site -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://www.example.com/current-page-path",
+    "name": "YOUR PAGE TITLE",
+    "description": "A concise page description for structured data.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Your Site Name",
+      "url": "https://www.example.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.example.com/assets/logo.png"
+      }
+    }
+  }
+  </script>
+
+  <!-- Stylesheet(s) -->
+  <link rel="stylesheet" href="/css/main.css" />
+
+  <!-- Security & referrer policy -->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Author / copyright -->
+  <meta name="author" content="Your Name or Company" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header role="banner">
+    <nav aria-label="Primary navigation">
+      <!-- Use semantic nav + accessible menu -->
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" role="main">
+    <article itemscope itemtype="https://schema.org/Article">
+      <header>
+        <h1 itemprop="headline">Page heading (H1) — unique and descriptive</h1>
+        <p class="lede" itemprop="description">A short one-line summary or teaser for the page.</p>
+      </header>
+
+      <section itemprop="articleBody">
+        <h2>Subheading (H2): Topic</h2>
+        <p>Opening paragraph — include your main keywords naturally, but keep readability first.</p>
+
+        <!-- Optimized image example -->
+        <figure>
+          <img src="/assets/example.jpg"
+               alt="Descriptive alternative text"
+               width="1200"
+               height="675"
+               loading="lazy" />
+          <figcaption>Caption for the image (optional).</figcaption>
+        </figure>
+
+        <h3>Subsection (H3)</h3>
+        <p>More content... keep paragraphs short and scannable.</p>
+      </section>
+
+      <footer>
+        <p>Published: <time datetime="2025-11-20">November 20, 2025</time></p>
+      </footer>
+    </article>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; <span id="year"></span> Your Site Name — <a href="/privacy/">Privacy</a></p>
+  </footer>
+
+  <script>
+    // small accessibility/perf helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
+
